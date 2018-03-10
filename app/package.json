@@ -1,0 +1,33 @@
+{
+    "name": "simplecnc",
+    "version": "1.0.0",
+    "description": "simplecnc",
+    "main": "./dist/app.bundle.js",
+    "author": "xeecos",
+    "license": "GPLv2",
+    "private": true,
+    "scripts": {
+        "pack": "webpack",
+        "start": "electron .",
+        "watch": "webpack --watch --color",
+        "emcc": "cd ../build && make clean && make && cd ../app",
+        "source": "source ../emsdk/emsdk_env.sh"
+    },
+    "dependencies": {
+        "jquery": "^3.2.1",
+        "md5": "^2.2.1"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "css-loader": "^0.28.9",
+        "electron": "^1.7.10",
+        "electron-rebuild": "^1.7.3",
+        "file-loader": "^1.1.10",
+        "node-loader": "^0.6.0",
+        "style-loader": "^0.19.1",
+        "webpack": "^3.10.0"
+    }
+}
