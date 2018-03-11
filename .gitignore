@@ -86,7 +86,7 @@ typings/
 *.exe
 *.out
 *.app
-emsdk
+
 .vscode
 *.lock
 .DS_Store
