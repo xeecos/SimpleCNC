@@ -4,6 +4,6 @@ export default class Editor extends React.Component {
     super();
   }
   render() {
-    return <div className={"editor"}>{"xxx"}</div>;
+    return <div className={"editor"}>{"Editor"}</div>;
   }
 }

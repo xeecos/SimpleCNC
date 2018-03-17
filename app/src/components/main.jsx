@@ -1,9 +1,7 @@
 import React from "react";
-import { Tabs, Select } from "antd";
-import Editor from "./editor.jsx";
-import Preview from "./preview.jsx";
-const TabPane = Tabs.TabPane;
-const Option = Select.Option;
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import Home from "./home.jsx";
+import Project from "./project.jsx";
 
 export default class Main extends React.Component {
   constructor(...args) {
@@ -11,21 +9,13 @@ export default class Main extends React.Component {
   }
   render() {
     return (
-      <div className={"main"}>
-        <Tabs
-          className={"tabs"}
-          tabPosition={"bottom"}
-          size={"large"}
-          animated={false}
-        >
-          <TabPane tab="编辑" key="1">
-            <Editor />
-          </TabPane>
-          <TabPane tab="加工" key="2">
-            <Preview />
-          </TabPane>
-        </Tabs>
-      </div>
+      <HashRouter>
+        <Switch>
+          <Route exact path="/home" component={Home} />
+          <Route path="/project" component={Project} />
+          <Redirect from="/" to="/home" />
+        </Switch>
+      </HashRouter>
     );
   }
 }

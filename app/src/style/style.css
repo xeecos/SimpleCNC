@@ -1,15 +1,32 @@
-.main {
+.home {
     bottom: 0;
     position: fixed;
     width: 100%;
     background-color: #212122;
 }
 
+.content {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.menu {
+    text-align: center;
+    background-color: #fff;
+    bottom: 0;
+}
+
+.menu-content {
+    margin: 0 auto;
+    display: inline-block;
+}
+
 .tabs {
     background-color: #fff;
 }
 
-.editor {
+.project {
     background-color: #212122;
     color: #eee;
     position: fixed;
@@ -19,7 +36,21 @@
     right: 0;
 }
 
-.preview {
+.processor {}
+
+.editor {}
+
+.projects {
+    background-color: #212122;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    bottom: 54px;
+    left: 0;
+    right: 0;
+}
+
+.community {
     background-color: #212122;
     color: #eee;
     position: fixed;
