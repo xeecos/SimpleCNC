@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-import { Menu, Icon, Button } from "antd";
+import { Menu, Icon, Button, Row, Col } from "antd";
 import Processor from "./processor";
 import Editor from "./editor";
 export default class Project extends React.Component {
@@ -36,16 +36,41 @@ export default class Project extends React.Component {
       content = <Processor />;
     }
     return (
-      <div className={"content"}>
-        <div className={"project"}>
-          <Button type="primary" onClick={this.backHome}>
-            Home
-          </Button>
-          {content}
+      <div className={"project"}>
+        <div className={"header"}>
+          <Row
+            align="middle"
+            type="flex"
+            justify="space-around"
+            style={{ height: "100%" }}
+          >
+            <Col span={8}>
+              <div className="left">
+                <Icon
+                  style={{ marginLeft: 6, fontSize: 28, color: "#08c" }}
+                  type="left"
+                  onClick={this.backHome}
+                />
+              </div>
+            </Col>
+            <Col span={8}>
+              <div className="center">{"Project"}</div>
+            </Col>
+            <Col span={8}>
+              <div className="right">
+                <Icon
+                  style={{ marginRight: 6, fontSize: 28, color: "#08c" }}
+                  type="bars"
+                  onClick={this.backHome}
+                />
+              </div>
+            </Col>
+          </Row>
         </div>
-        <div className={"menu"}>
+        <div className="content">{content}</div>
+        <div className={"footer"}>
           <Menu
-            className={"menu-content"}
+            className={"menu"}
             onClick={this.handleClick}
             selectedKeys={[this.state.current]}
             mode="horizontal"

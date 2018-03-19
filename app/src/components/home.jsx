@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Icon } from "antd";
+import { Menu, Icon, Row, Col } from "antd";
 import Projects from "./projects.jsx";
 import Community from "./community.jsx";
 export default class Home extends React.Component {
@@ -25,10 +25,28 @@ export default class Home extends React.Component {
     }
     return (
       <div className={"home"}>
-        {content}
-        <div className={"menu"}>
+        <div className={"header"}>
+          <Row
+            align="middle"
+            type="flex"
+            justify="space-around"
+            style={{ height: "100%" }}
+          >
+            <Col span={8}>
+              <div className="left">{}</div>
+            </Col>
+            <Col span={8}>
+              <div className="center">{"Home"}</div>
+            </Col>
+            <Col span={8}>
+              <div className="right">{}</div>
+            </Col>
+          </Row>
+        </div>
+        <div className="content">{content}</div>
+        <div className={"footer"}>
           <Menu
-            className={"menu-content"}
+            className={"menu"}
             onClick={this.handleClick}
             selectedKeys={[this.state.current]}
             mode="horizontal"

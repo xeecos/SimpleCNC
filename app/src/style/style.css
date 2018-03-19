@@ -2,22 +2,42 @@
     bottom: 0;
     position: fixed;
     width: 100%;
+    height: 100%;
     background-color: #212122;
 }
 
-.content {
+.header {
+    top: 0;
+    position: absolute;
     width: 100%;
-    position: fixed;
-    bottom: 0;
+    height: 48px;
+    background-color: #fff;
+    color: #333;
 }
 
-.menu {
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.footer {
     text-align: center;
     background-color: #fff;
     bottom: 0;
+    height: 54px;
+    width: 100%;
+    position: fixed;
 }
 
-.menu-content {
+.menu {
+    bottom: 0;
     margin: 0 auto;
     display: inline-block;
 }
@@ -26,28 +46,10 @@
     background-color: #fff;
 }
 
-.project {
-    background-color: #212122;
-    color: #eee;
-    position: fixed;
-    top: 0;
-    bottom: 54px;
-    left: 0;
-    right: 0;
-}
-
-.processor {}
-
-.editor {}
-
 .projects {
     background-color: #212122;
     color: #eee;
-    position: fixed;
-    top: 0;
-    bottom: 54px;
-    left: 0;
-    right: 0;
+    position: relative;
 }
 
 .community {
@@ -58,4 +60,120 @@
     bottom: 54px;
     left: 0;
     right: 0;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    bottom: 54px;
+    top: 48px;
+}
+
+.project {
+    background-color: #212122;
+    color: #eee;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+}
+
+.processor {}
+
+.editor {}
+
+.canvas-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    background-color: #222;
+}
+
+.tool {
+    position: absolute;
+    top: 50%;
+    margin-top: -130px;
+    left: 10px;
+    width: 70px;
+    height: 260px;
+    background-image: url("../assets/tool.png");
+}
+
+.tool-rect {
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    width: 48px;
+    height: 48px;
+    background-image: url("../assets/rect.png");
+}
+
+.tool-circle {
+    position: absolute;
+    top: 76px;
+    left: 11px;
+    width: 48px;
+    height: 48px;
+    background-image: url("../assets/circle.png");
+}
+
+.tool-text {
+    position: absolute;
+    top: 140px;
+    left: 11px;
+    width: 48px;
+    height: 48px;
+    background-image: url("../assets/text.png");
+}
+
+.tool-file {
+    position: absolute;
+    top: 200px;
+    left: 11px;
+    width: 48px;
+    height: 48px;
+    background-image: url("../assets/file.png");
+}
+
+.property {
+    position: absolute;
+    top: 50%;
+    margin-top: -180px;
+    right: 0px;
+    width: 360px;
+    height: 360px;
+    background-color: #333;
+}
+
+.box-size {
+    margin: 10px 10px;
+}
+
+.property-title {
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    margin: 5px 0;
+    color: #888;
+}
+
+.property-txt {
+    display: inline;
+    margin: 0 0;
+    padding: 0 10px;
+    font-size: 14px;
+    background-color: #333;
+}
+
+.property-line {
+    border-top: 1px solid #555;
+    margin-top: -10px;
+    margin-left: 5%;
+    width: 90%;
 }

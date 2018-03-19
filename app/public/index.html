@@ -11,6 +11,7 @@
             background-color: #212122;
         }
     </style>
+    <link href="bundle.css" rel="stylesheet" />
 
 </head>
 
@@ -18,14 +19,6 @@
     <div id="site">
 
     </div>
-    <script type="text/javascript">
-        const {
-            webFrame
-        } = require("electron");
-        webFrame.registerURLSchemeAsPrivileged('file', {
-            bypassCSP: true
-        });
-    </script>
     <script type="text/javascript" src="web.bundle.js"></script>
 
 </body>

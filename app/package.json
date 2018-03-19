@@ -9,6 +9,7 @@
     "scripts": {
         "pack": "webpack",
         "start": "electron .",
+        "server": "webpack-dev-server --contentBase ./public --host 192.168.31.211 --port 9000 --bonjour",
         "watch": "webpack --watch --color",
         "emcc": "cd ../build && make clean && make && cd ../app",
         "source": "source ../emsdk/emsdk_env.sh"
@@ -25,14 +26,18 @@
         "antd": "^3.3.0",
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
+        "babel-plugin-import": "^1.6.7",
         "babel-preset-env": "^1.6.1",
         "babel-preset-react": "^6.24.1",
         "css-loader": "^0.28.9",
         "electron": "^1.7.10",
         "electron-rebuild": "^1.7.3",
         "file-loader": "^1.1.10",
+        "mini-css-extract-plugin": "^0.2.0",
         "node-loader": "^0.6.0",
         "style-loader": "^0.19.1",
-        "webpack": "^3.10.0"
+        "webpack": "^4.1.1",
+        "webpack-cli": "^2.0.12",
+        "webpack-dev-server": "^3.1.1"
     }
 }
